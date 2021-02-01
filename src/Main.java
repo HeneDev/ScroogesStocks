@@ -147,7 +147,7 @@ public class Main
 
     Double closeLastCompareValue = 0.0; //Make an variable to compare closeLast value to
 
-    //Loop list of Objectives
+    //Loop list of Objectives from end to beginning
     for (int i = listOfData.size(); i-- > 0; )
     {
       if (isDateInBetweenIncludingEndPoints(begin, end, listOfData.get(i).getStockDate()))
