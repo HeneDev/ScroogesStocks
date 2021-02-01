@@ -116,7 +116,7 @@ public class Main
     // 3 = Open
     // 4 = High
     // 5 = Low
-    try (Scanner fileReader = new Scanner(Paths.get("C:\\Users\\Henri\\IdeaProjects\\Scrooges_Stocks\\src\\HistoricalQuotes.csv")))
+    try (Scanner fileReader = new Scanner(Paths.get("src\\HistoricalQuotes.csv")))
     {
       String nextRow = fileReader.nextLine(); //Skip the first line, as it only contains the data labels
       while (fileReader.hasNextLine())
