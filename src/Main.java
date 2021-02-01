@@ -40,7 +40,7 @@ public class Main
             System.out.print(">> ");
             String endDate = inputReader.nextLine();
 
-            if (startDate.matches("\\d{2}/\\d{2}/\\d{4}") && endDate.matches("\\d{2}/\\d{2}/\\d{4}"))
+            if (startDate.matches("\\d{2}/\\d{2}/\\d{4}") && endDate.matches("\\d{2}/\\d{2}/\\d{4}")) //Regex to make sure input is in mm/dd/yyyy format
             {
               BullishTrend(startDate, endDate, listOfData);
               System.out.println();
@@ -64,7 +64,7 @@ public class Main
             System.out.print(">> ");
             String endDate = inputReader.nextLine();
 
-            if (startDate.matches("\\d{2}/\\d{2}/\\d{4}") && endDate.matches("\\d{2}/\\d{2}/\\d{4}"))
+            if (startDate.matches("\\d{2}/\\d{2}/\\d{4}") && endDate.matches("\\d{2}/\\d{2}/\\d{4}")) //Regex to make sure input is in mm/dd/yyyy format
             {
               HighestTradingVolume(startDate, endDate, listOfData);
               System.out.println();
@@ -88,7 +88,7 @@ public class Main
             System.out.print(">> ");
             String endDate = inputReader.nextLine();
 
-            if (startDate.matches("\\d{2}/\\d{2}/\\d{4}") && endDate.matches("\\d{2}/\\d{2}/\\d{4}"))
+            if (startDate.matches("\\d{2}/\\d{2}/\\d{4}") && endDate.matches("\\d{2}/\\d{2}/\\d{4}")) //Regex to make sure input is in mm/dd/yyyy format
             {
               SimpleMovingAverage(startDate, endDate, listOfData);
               System.out.println();
@@ -108,6 +108,7 @@ public class Main
     }
   }
 
+  //Function to read from given file once
   public static void ReadFromFile(List<Data> listOfData)
   {
     // 0 = Date
@@ -157,7 +158,7 @@ public class Main
           maxDaysIncreased++;
         } else
         {
-          maxDaysIncreased = 0;
+          maxDaysIncreased = 0; //If price doesnt increase, reset days
         }
         closeLastCompareValue = listOfData.get(i).getCloseLastAsValue();
       }
